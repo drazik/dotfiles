@@ -12,6 +12,7 @@ Plug 'w0rp/ale'
 Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 colorscheme onedark
@@ -47,6 +48,18 @@ let g:user_emmet_settings = {
 \      'extends' : 'tsx',
 \  },
 \}
+
+" disable auto_triggering ycm suggestions pane and instead
+" use semantic completion only on Ctrl+n
+let ycm_trigger_key = '<C-n>'
+let g:ycm_auto_trigger = 0
+let g:ycm_key_invoke_completion = ycm_trigger_key
+
+" this is some arcane magic to allow cycling through the YCM options
+" with the same key that opened it.
+" See http://vim.wikia.com/wiki/Improve_completion_popup_menu for more info.
+let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
+inoremap <expr> ycm_trigger_key pumvisible() ? "<C-j>" : ycm_trigger_key;
 
 let mapleader=","
 
