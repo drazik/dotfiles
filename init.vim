@@ -11,6 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 colorscheme onedark
@@ -36,6 +37,16 @@ let g:ale_linters = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
       \   'javascript': ['eslint']
       \}
+
+" make emmet behave well with JSX in JS and TS files
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\  'typescript' : {
+\      'extends' : 'tsx',
+\  },
+\}
 
 let mapleader=","
 
