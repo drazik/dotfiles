@@ -9,6 +9,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
+Plug 'shime/vim-livedown'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme onedark
