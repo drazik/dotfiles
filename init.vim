@@ -13,6 +13,7 @@ Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 colorscheme onedark
