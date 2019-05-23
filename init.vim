@@ -12,8 +12,8 @@ Plug 'w0rp/ale'
 Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 call plug#end()
 
 colorscheme onedark
@@ -50,18 +50,6 @@ let g:user_emmet_settings = {
 \  },
 \}
 
-" disable auto_triggering ycm suggestions pane and instead
-" use semantic completion only on Ctrl+n
-let ycm_trigger_key = '<C-n>'
-let g:ycm_auto_trigger = 0
-let g:ycm_key_invoke_completion = ycm_trigger_key
-
-" this is some arcane magic to allow cycling through the YCM options
-" with the same key that opened it.
-" See http://vim.wikia.com/wiki/Improve_completion_popup_menu for more info.
-let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
-inoremap <expr> ycm_trigger_key pumvisible() ? "<C-j>" : ycm_trigger_key;
-
 let mapleader=","
 
 nnoremap <leader>b :Buffers<CR>
@@ -78,3 +66,18 @@ vnoremap H ^^
 nnoremap L $
 vnoremap L $
 inoremap jk <ESC>
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
