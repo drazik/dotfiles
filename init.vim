@@ -29,6 +29,7 @@ set smartcase
 set scrolloff=999
 set cursorline
 set noswapfile
+set backupcopy=yes
 
 if has("autocmd")
   " Read Cozy manifest files as JSON
