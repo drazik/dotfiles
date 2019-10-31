@@ -51,7 +51,11 @@ let g:user_emmet_settings = {
 \  },
 \}
 
-let mapleader=","
+let g:netrw_liststyle = 1
+let g:netrw_banner = 0
+let g:netrw_sizestyle= "h"
+
+let mapleader=" "
 
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>e :Explore<CR>
