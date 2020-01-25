@@ -1,0 +1,12 @@
+[user]
+  email = cperois@protonmail.com
+  name = Cyrille Perois
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  lg = log --oneline --graph
+  pushf = push --force-with-lease
+[rebase]
+  autosquash = true
