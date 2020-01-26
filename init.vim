@@ -12,7 +12,7 @@ Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 set number
