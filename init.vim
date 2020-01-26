@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'sheerun/vim-polyglot'
-Plug 'joshdick/onedark.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -15,8 +14,6 @@ Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
 " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 call plug#end()
-
-colorscheme onedark
 
 set number
 set clipboard=unnamedplus
