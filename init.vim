@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'sheerun/vim-polyglot'
-Plug 'joshdick/onedark.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -9,14 +8,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
-Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
-colorscheme onedark
 
 set number
 set clipboard=unnamedplus
@@ -71,14 +67,6 @@ vnoremap H ^^
 nnoremap L $
 vnoremap L $
 inoremap jk <ESC>
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
