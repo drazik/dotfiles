@@ -63,3 +63,6 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>e :Explore<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>w :bd<CR>
+
+" Remove search highlights
+nnoremap <leader><SPACE> :nohls<CR>
