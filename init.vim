@@ -40,6 +40,13 @@ set hidden
 set cursorline
 hi CursorLine term=bold cterm=bold
 
+" Disable safe write so hot reload works in parcel (and probably others)
+" See https://parceljs.org/hmr.html#safe-write
+set backupcopy=yes
+
+" Disable swap files so I never get annoying warnings about them
+set noswapfile
+
 let mapleader = " "
 
 " Movements mappings
