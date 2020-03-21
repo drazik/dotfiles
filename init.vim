@@ -47,6 +47,14 @@ set backupcopy=yes
 " Disable swap files so I never get annoying warnings about them
 set noswapfile
 
+" ALE fixers definitions
+" See https://github.com/dense-analysis/ale#2ii-fixing
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\}
+let g:ale_fix_on_save = 1
+
 let mapleader = " "
 
 " Movements mappings
