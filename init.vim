@@ -9,16 +9,25 @@ endif
 " Plugins to install using vim-plug
 " See https://github.com/junegunn/vim-plug#usage
 call plug#begin(stdpath('data') . '/plugged')
+
+" Aesthetics
+
+
+" Functionality
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+
+" Programming
+Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " unnamedplus registry is the system one
