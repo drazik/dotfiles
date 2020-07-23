@@ -8,5 +8,8 @@
   co = checkout
   lg = log --oneline --graph
   pushf = push --force-with-lease
+	ass = add
 [rebase]
   autosquash = true
+[core]
+	fileMode = false
